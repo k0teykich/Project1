@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">COUNTING TRAINING</string>
+    <string name="project">COUNTING TRAINING</string>
+    <string name="play">Play!</string>
+    <string name="age">Введите год своего рождения</string>
+    <string name="age_ok">OK</string>
+    <string name="rules">На экране будут появлятся разные предметы - игрушки, фрукты, сладости и тому подобное. Тебе нужно посчитать их. После этого нужно ввести их количество в строчку. Если ты ответил правильно - ты перейдешь на следующий уровень. В противном случае, ты окажешься в самом начале игры. Желаю удачи!</string>
+    <string name="game">Сколько предметов на экране?</string>
+    <string name="correct"> </string>
+    <string name="title_activity_lose">LoseActivity</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>
