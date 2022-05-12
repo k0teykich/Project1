@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@null"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="411dp"
-        android:layout_height="173dp"
-        android:background="@color/purple_200"
+        android:layout_width="428dp"
+        android:layout_height="440dp"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:shadowColor="@color/black"
+        android:shadowRadius="20"
         android:text="@string/project"
-        android:textColor="@color/black"
+        android:textColor="@color/main1"
         android:textSize="70sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,10 +27,12 @@
         app:layout_constraintVertical_bias="0.499" />
 
     <Button
+        android:fontFamily="sans-serif-condensed-light"
         android:id="@+id/button_play"
         android:layout_width="378dp"
         android:layout_height="57dp"
-        android:background="@color/purple_200"
+        android:background="@color/main1"
+        android:textColor="@color/white"
         android:text="@string/play"
         android:textSize="30sp"
         android:textStyle="bold"

@@ -1,14 +1,11 @@
 package com.example.myapplication;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,7 +41,7 @@ public class GameActivity1 extends AppCompatActivity implements View.OnClickList
 
         GridView gridview = (GridView) findViewById(R.id.gridView1);
         imageAdapter = new ImageAdapter(this);
-        imageAdapter.setCurrentImageId(R.drawable.apple);
+        imageAdapter.setCurrentImageId(R.drawable.toy);
         imageAdapter.setCurrentCountOfImages(getRandomNumber());
 
         gridview.setAdapter(imageAdapter);
@@ -68,18 +65,15 @@ public class GameActivity1 extends AppCompatActivity implements View.OnClickList
             newGameIteration();
 
             TextView textView = (TextView) findViewById(R.id.textView5);
-            textView.setText("Ваш счет: " + ++score);
-
-            Intent intent = new Intent(this, WinActivity.class);
-            startActivity(intent);}
+            textView.setText("Ваш счет: " + ++score);}
         //НЕПРАВИЛЬНЫЙ ОТВЕТ
         else {
-            Toast.makeText(getApplicationContext(), "Ответ неправильный", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, LoseActivity.class);
             startActivity(intent);
         }
     }
 }
+
 
 
 
