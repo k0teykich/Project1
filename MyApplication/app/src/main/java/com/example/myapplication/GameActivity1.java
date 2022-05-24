@@ -70,6 +70,7 @@ public class GameActivity1 extends AppCompatActivity implements View.OnClickList
         else {
             Intent intent = new Intent(this, LoseActivity.class);
             startActivity(intent);
+            finish();
         }
     }
 }
