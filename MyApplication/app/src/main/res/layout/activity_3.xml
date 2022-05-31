@@ -43,8 +43,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.607"
         tools:ignore="MissingConstraints" />
-
     <Button
+        android:onClick="onClick"
         android:id="@+id/button_ok2"
         android:layout_width="400pt"
         android:layout_height="40pt"
@@ -62,5 +62,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.995"
         tools:ignore="MissingConstraints,DuplicateClickableBoundsCheck" />
+
 
 </android.support.constraint.ConstraintLayout>

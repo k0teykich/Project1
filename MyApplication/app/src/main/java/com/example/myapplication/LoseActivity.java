@@ -15,7 +15,19 @@ public class LoseActivity extends AppCompatActivity {
     public void onClick(View v){
         switch (v.getId()) {
             case R.id.button_ok2:
-                Intent intent = new Intent(this,Activity3.class);
+                Intent intent = new Intent(this,levels.class);
+                startActivity(intent);
+                int score = +1;
+                break;
+            default:
+                break;
+
+        }
+    }
+    public void onClickMenu(View v){
+        switch (v.getId()) {
+            case R.id.button_menu:
+                Intent intent = new Intent(this,MainActivity.class);
                 startActivity(intent);
                 int score = +1;
                 break;

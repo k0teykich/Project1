@@ -8,28 +8,25 @@ import android.widget.Button;
 
 public class Activity3 extends AppCompatActivity implements View.OnClickListener{
 
-    Button button3;
+    Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_3);
 
-        button3 = findViewById(R.id.button_ok2);
-        button3.setOnClickListener(this);
+        button = findViewById(R.id.button_ok2);
+        button.setOnClickListener(this);
     }
     //ПЕРЕХОД НА АКТИВНОСТЬ С ПРАВИЛАМИ
-
     @Override
     public void onClick(View v){
         switch (v.getId()) {
             case R.id.button_ok2:
-                Intent intent = new Intent(this,GameActivity1.class);
+                Intent intent = new Intent(this,levels.class);
                 startActivity(intent);
                 break;
             default:
                 break;
         }
     }
-
-
 }

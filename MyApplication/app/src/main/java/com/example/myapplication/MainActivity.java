@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.app.Activity;
 import android.widget.Button;
+import android.widget.Toast;
+
+import java.net.URL;
 
 public class MainActivity extends Activity implements View.OnClickListener{
 
-    //ПЕРЕХОД НА АКТИВНОСТЬ С ВЫБОРОМ ВОЗРАСТА!
     Button button1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +20,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
         button1 = (Button) findViewById(R.id.button_play);
         button1.setOnClickListener(this);
     }
+
+    //ПРАВИЛА
     @Override
     public void onClick(View v){
         switch (v.getId()) {

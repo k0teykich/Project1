@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".SecretActivity"
+            android:exported="false" />
+        <activity
+            android:name=".levels"
+            android:exported="false" />
+        <activity
+            android:name=".Complexity"
+            android:exported="false" />
+        <activity
+            android:name=".GameActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".GameActivity2"
+            android:exported="false" />
+        <activity
             android:name=".LoseActivity"
             android:exported="false"
             android:label="@string/title_activity_lose"
