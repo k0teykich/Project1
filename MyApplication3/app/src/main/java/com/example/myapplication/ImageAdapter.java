@@ -1,7 +1,6 @@
 package com.example.myapplication;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +20,6 @@ public class ImageAdapter extends BaseAdapter {
         currentCountOfImages = 0;
         imageViews = new ImageView[countOfItems];
     }
-
     public void setCurrentCountOfImages(int count)
     {
         currentCountOfImages = count;

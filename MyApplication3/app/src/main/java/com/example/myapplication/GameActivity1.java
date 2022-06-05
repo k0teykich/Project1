@@ -10,11 +10,10 @@ import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class GameActivity2 extends AppCompatActivity implements View.OnClickListener{
+public class GameActivity1 extends AppCompatActivity implements View.OnClickListener{
 
-    //ImageAdapter Randomizer
     private int score;
-    private ImageAdapter2 imageAdapter;
+    private ImageAdapter imageAdapter;
     private Button[] buttonsAnswer;
 
     private void newGameIteration() {
@@ -37,10 +36,26 @@ public class GameActivity2 extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game2);
+        Bundle arguments = getIntent().getExtras();
+        int diff = arguments.getInt("diff");
+        int countOfItems = 0;
+        switch (diff){
+            case 1:
+                countOfItems = 6;
+                setContentView(R.layout.activity_game2);
+                break;
+            case 2:
+                countOfItems = 12;
+                setContentView(R.layout.activity_game1);
+                break;
+            case 3:
+                countOfItems = 24;
+                setContentView(R.layout.activity_game3);
+                break;
+        }
 
-        GridView gridview = (GridView) findViewById(R.id.gridView2);
-        imageAdapter = new ImageAdapter2(this);
+        GridView gridview = (GridView) findViewById(R.id.gridView1);
+        imageAdapter = new ImageAdapter(this, countOfItems);//устанавливаем число полей GridView
         imageAdapter.setCurrentImageId(R.drawable.toy);
         imageAdapter.setCurrentCountOfImages(getRandomNumber());
 

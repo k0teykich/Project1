@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".GameActivity3">
+    tools:context=".GameActivity1">
 
     <GridView
         android:id="@+id/gridView1"

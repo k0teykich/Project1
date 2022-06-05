@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".GameActivity2">
+    tools:context=".GameActivity1">
 
     <GridView
-        android:id="@+id/gridView2"
+        android:id="@+id/gridView1"
         android:layout_width="420pt"
         android:layout_height="550pt"
         android:gravity="center"
