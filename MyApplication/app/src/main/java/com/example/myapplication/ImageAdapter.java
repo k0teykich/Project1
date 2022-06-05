@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,12 +15,13 @@ public class ImageAdapter extends BaseAdapter {
     private int countOfItems;
     private int currentCountOfImages;
     private ImageView imageViews[];
-    public ImageAdapter(Context c) {
+    public ImageAdapter(Context c, int countOfItems) {
         mContext = c;
-        countOfItems = 12;
+        this.countOfItems = countOfItems;
         currentCountOfImages = 0;
         imageViews = new ImageView[countOfItems];
     }
+
     public void setCurrentCountOfImages(int count)
     {
         currentCountOfImages = count;
@@ -83,9 +85,7 @@ public class ImageAdapter extends BaseAdapter {
         } else {
             imageView = (ImageView) convertView;
         }
-        Log.d("Logging", "InGetView");
         imageView.setImageResource(currentImageId);
-        //imageView.setVisibility(View.INVISIBLE);
         if(position == getCount() - 1)
             setImagesAtRandomPosition(currentCountOfImages);
         return imageView;

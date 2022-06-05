@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -12,7 +13,6 @@ import android.widget.Toast;
 
 public class GameActivity1 extends AppCompatActivity implements View.OnClickListener{
 
-    //ImageAdapter Randomizer
     private int score;
     private ImageAdapter imageAdapter;
     private Button[] buttonsAnswer;
@@ -34,13 +34,26 @@ public class GameActivity1 extends AppCompatActivity implements View.OnClickList
         return (int) (Math.random() * (imageAdapter.getCount() - 1)) + 1;
     }
 
-    @Override
+    Bundle hard = getIntent().getExtras();
+    int name1 = hard.getInt("hard");
+
+    Bundle medium = getIntent().getExtras();
+    int name2 = medium.getInt("medium");
+
+    Bundle easy = getIntent().getExtras();
+    int name3 = easy.getInt("easy");
+
+
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game1);
+        setContentView(R.layout.activity_game1);//устанавливаем разметку
+        //setContentView(R.layout.activity_game2);//устанавливаем разметку
+        //setContentView(R.layout.activity_game3);//устанавливаем разметку
 
         GridView gridview = (GridView) findViewById(R.id.gridView1);
-        imageAdapter = new ImageAdapter(this);
+        imageAdapter = new ImageAdapter(this, 12);//устанавливаем число полей GridView
         imageAdapter.setCurrentImageId(R.drawable.toy);
         imageAdapter.setCurrentCountOfImages(getRandomNumber());
 
